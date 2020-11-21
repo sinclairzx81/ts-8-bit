@@ -19,7 +19,7 @@ type R2 = Num<T2>      // type R2 = 126
 
 ## Overview
 
-ts-8bit is an experimental TypeScript library that performs 8-bit calculations on the TypeScript type system. It does so by applying bitwise ops on TypeScript tuples of length 8 (8-bit) and uses TypeScript type inference to give the result. This project was written as a exercise in TypeScript and is offered as is for anyone who may find it of use.
+ts-8bit is an experimental TypeScript library that performs 8-bit calculations on the TypeScript's type system. It does so by applying bitwise ops on TypeScript tuples of length 8 (8-bit) and uses TypeScript's type inference to give the result. This project was written as a exercise in TypeScript and is offered as is for anyone who may find it of use.
 
 Requires TypeScript 4.1.2 and above.
 
