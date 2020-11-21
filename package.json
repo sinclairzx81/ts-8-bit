@@ -1,0 +1,12 @@
+{
+  "name": "ts-8bit",
+  "version": "0.8.0",
+  "description": "ts-8bit: Doing math on the TypeScript type system.",
+  "main": "index.js",
+  "keywords": ["typescript", "conditional-types", "8-bit", "math"],
+  "author": "sinclairzx81",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.1.2"
+  }
+}
