@@ -48,14 +48,14 @@ export type BitAnd<T extends [Bit, Bit]> =
     T extends [1, 1] ? 1 :
     never
 
-type BitOr<T extends [Bit, Bit]> =
+export type BitOr<T extends [Bit, Bit]> =
     T extends [0, 0] ? 0 :
     T extends [0, 1] ? 1 :
     T extends [1, 0] ? 1 :
     T extends [1, 1] ? 1 :
     never
 
-type BitXor<T extends [Bit, Bit]> =
+export type BitXor<T extends [Bit, Bit]> =
     T extends [0, 0] ? 0 :
     T extends [0, 1] ? 1 :
     T extends [1, 0] ? 1 :
@@ -137,11 +137,11 @@ export type Xor<
     BitXor<[A[7], B[7]]>,
 ]
 
-export type LShift<T extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit], I extends Index> =
-    I extends 0 ? T : LShift<[T[1], T[2], T[3], T[4], T[5], T[6], T[7], 0], Prev<I>>
+export type Lsh<T extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit], I extends Index> =
+    I extends 0 ? T : Lsh<[T[1], T[2], T[3], T[4], T[5], T[6], T[7], 0], Prev<I>>
 
-export type RShift<T extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit], I extends Index> =
-    I extends 0 ? T : RShift<[0, T[0], T[1], T[2], T[3], T[4], T[5], T[6]], Prev<I>>
+export type Rsh<T extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit], I extends Index> =
+    I extends 0 ? T : Rsh<[0, T[0], T[1], T[2], T[3], T[4], T[5], T[6]], Prev<I>>
 
 // -------------------------------------------------------------------------
 // Addition
