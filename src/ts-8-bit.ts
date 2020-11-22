@@ -1,6 +1,6 @@
 /*--------------------------------------------------------------------------
 
-ts-8bit: 8bit math on the TypeScript type system
+ts-8-bit: 8bit math on the TypeScript type system
 
 The MIT License (MIT)
 
