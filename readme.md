@@ -42,7 +42,7 @@ type C = Add<A, B> // type C = [1, 1, 0, 0, 0, 0, 0, 0]
 You can convert between `number` and `binary` representations of the byte using the `Byte<T>` and `Num<T>` types. The following is the same as the example above using conversions.
 
 ```typescript
-import { Byte, Num, Add } from './ts-8bit'
+import { Byte, Num, Add } from './ts-8-bit'
 
 type A = Byte<1>        // type A = [1, 0, 0, 0, 0, 0, 0, 0]
 type B = Byte<2>        // type B = [0, 1, 0, 0, 0, 0, 0, 0]
@@ -55,7 +55,7 @@ type D = Num<C>         // type D = 3
 The following operations are currently implemented for this library.
 
 ```typescript
-import { Byte, Num, Add, Sub, Mul, Not, And, Or, Xor, Lsh, Rsh } from './ts-8bit'
+import { Byte, Num, Add, Sub, Mul, Not, And, Or, Xor, Lsh, Rsh } from './ts-8-bit'
 
 type A   = Byte<100>
 type B   = Byte<50>
