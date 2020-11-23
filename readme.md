@@ -19,7 +19,7 @@ type R2 = Num<T2>      // type R2 = 126
 
 ## Overview
 
-ts-8-bit is an experimental TypeScript library that does 8-bit arithmetic on TypeScript's type system. It does so by applying bitwise operations on tuples of length 8 (1 byte) and leverages TypeScript conditional and type inference to compute the result. This project was written as a exercise in TypeScript and is offered as is for anyone who may find it of use.
+ts-8-bit is an experimental library that does 8-bit arithmetic on TypeScript's type system. It does so by applying bitwise operations on tuples of length 8 (1 byte) and leverages TypeScript conditional and type inference to infer the result. This project was written as a exercise in TypeScript and is offered as is for anyone who may find it of use.
 
 Requires TypeScript 4.1.2 and above.
 
@@ -55,19 +55,19 @@ type D = Num<C>         // type D = 3
 The following operations are currently implemented for this library.
 
 ```typescript
-import { Byte, Num, Add, Sub, Mul, Not, And, Or, Xor, Lsh, Rsh } from './ts-8-bit'
+import { Byte, Num, Add, Sub, Mul, Lsh, Rsh, And, Xor, Or, Not } from './ts-8-bit'
 
 type A   = Byte<100>
 type B   = Byte<50>
 type C   = Byte<33>
 
-type T0 = Add<A, B>      // A + B
-type T1 = Sub<A, B>      // A - B
-type T2 = Mul<C, 3>      // C * 3
-type T3 = Not   <A>      // Bitwise Unary Not
-type T4 = And   <A, B>   // Bitwise And
-type T5 = Or    <A, B>   // Bitwise Or
-type T6 = Xor   <A, B>   // Bitwise Xor
-type T7 = Lsh   <A, 1>   // Shift <<
-type T8 = Rsh   <A, 2>   // Shift >>
+type T0 = Add<A, B>  // A + B
+type T1 = Sub<A, B>  // A - B
+type T2 = Mul<C, 3>  // C * 3
+type T3 = Lsh<A, 1>  // A << 1
+type T4 = Rsh<A, 2>  // A >> 2
+type T5 = And<A, B>  // A & B
+type T6 = Xor<A, B>  // A ^ B
+type T7 = Or<A, B>   // A | B
+type T8 = Not<A>     // !A
 ```
