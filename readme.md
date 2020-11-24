@@ -11,26 +11,26 @@ import {
 } from './ts-8-bit'
 
 // Arithmetic
-type A = Num< Add < Byte<12>, Byte<22> > >  // type A = 34
-type B = Num< Sub < Byte<47>, Byte<12> > >  // type B = 35
-type C = Num< Mul < Byte<31>, Byte<4>  > >  // type C = 124
-type D = Num< Div < Byte<16>, Byte<8>  > >  // type D = 2
-type E = Num< Mod < Byte<19>, Byte<4>  > >  // type E = 3
+type A = Num< Add < Byte<12>, Byte<22> > >  // + type A = 34
+type B = Num< Sub < Byte<47>, Byte<12> > >  // - type B = 35
+type C = Num< Mul < Byte<31>, Byte<4>  > >  // * type C = 124
+type D = Num< Div < Byte<16>, Byte<8>  > >  // / type D = 2
+type E = Num< Mod < Byte<19>, Byte<4>  > >  // % type E = 3
 
 // Equality
-type F = Eq < Byte<10>, Byte<10> >          // type F = true
-type G = Lt < Byte<10>, Byte<10> >          // type G = false
-type H = Gt < Byte<20>, Byte<10> >          // type H = true
-type I = Lte< Byte<10>, Byte<10> >          // type I = true
-type J = Gte< Byte<20>, Byte<10> >          // type J = true
+type F = Eq < Byte<10>, Byte<10> >          // == type F = true
+type G = Lt < Byte<10>, Byte<10> >          // <  type G = false
+type H = Gt < Byte<20>, Byte<10> >          // >  type H = true
+type I = Lte< Byte<10>, Byte<10> >          // <= type I = true
+type J = Gte< Byte<20>, Byte<10> >          // >= type J = true
 
 // Bitwise
-type K = Num< Rsh < Byte<64>, 3 > >         // type K = 8
-type L = Num< Lsh < Byte<23>, 2 > >         // type L = 92
-type M = Num< Or  < Byte<33>, Byte<7> > >   // type M = 39 
-type N = Num< And < Byte<12>, Byte<5> > >   // type N = 4
-type O = Num< Xor < Byte<22>, Byte<17 > > > // type O = 7
-type P = Num< Not < Byte<253> > >           // type P = 2
+type K = Num< Rsh < Byte<64>, 3 > >         // >> type K = 8
+type L = Num< Lsh < Byte<23>, 2 > >         // << type L = 92
+type M = Num< Or  < Byte<33>, Byte<7> > >   // |  type M = 39 
+type N = Num< And < Byte<12>, Byte<5> > >   // &  type N = 4
+type O = Num< Xor < Byte<22>, Byte<17 > > > // ^  type O = 7
+type P = Num< Not < Byte<253> > >           // !  type P = 2
 ```
 
 ## Overview
