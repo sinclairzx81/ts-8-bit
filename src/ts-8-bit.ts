@@ -129,6 +129,62 @@ export type Rsh<T extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit], I extends In
 export type Lsh<T extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit], I extends Index> =
     I extends 0 ? T : Lsh<[0, T[0], T[1], T[2], T[3], T[4], T[5], T[6]], Prev<I>>
 
+
+// -------------------------------------------------------------------------
+// Equality
+// -------------------------------------------------------------------------
+
+export type Eq<
+    A extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit],
+    B extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit]
+> = A extends B ? true : false
+
+export type LtOp<
+    A extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit],
+    B extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit],
+    I extends Index
+> = A extends B ? false :
+    [A[I], B[I]] extends [0, 0] ? LtOp<A, B, Prev<I>> :
+    [A[I], B[I]] extends [1, 1] ? LtOp<A, B, Prev<I>> :
+    [A[I], B[I]] extends [1, 0] ? false :
+    [A[I], B[I]] extends [0, 1] ? true :
+    false
+
+export type Lt<
+    A extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit],
+    B extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit],
+> = LtOp<A, B, 7>
+
+export type Lte<
+    A extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit],
+    B extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit],
+> = [Eq<A, B>, Lt<A, B>] extends [true, false] ? true :
+    [Eq<A, B>, Lt<A, B>] extends [false, true] ? true : 
+    false
+
+export type GtOp<
+    A extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit],
+    B extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit],
+    I extends Index
+> = A extends B ? false :
+    [A[I], B[I]] extends [0, 0] ? GtOp<A, B, Prev<I>> :
+    [A[I], B[I]] extends [1, 1] ? GtOp<A, B, Prev<I>> :
+    [A[I], B[I]] extends [0, 1] ? false :
+    [A[I], B[I]] extends [1, 0] ? true :
+    false
+
+export type Gt<
+    A extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit],
+    B extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit],
+> = GtOp<A, B, 7>
+
+export type Gte<
+    A extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit],
+    B extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit],
+> = [Eq<A, B>, Gt<A, B>] extends [true, false] ? true :
+    [Eq<A, B>, Gt<A, B>] extends [false, true] ? true : 
+    false
+
 // -------------------------------------------------------------------------
 // Addition
 // -------------------------------------------------------------------------
