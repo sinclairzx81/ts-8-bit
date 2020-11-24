@@ -1,6 +1,9 @@
-# ts-8-bit
+<div align='center'>
 
-Using TypeScript's Type System to do 8-bit Arithmetic [Demo](https://www.typescriptlang.org/play?#code/PTAEFpK6dv4YpcBQJQc6A+rv2d8tM9iTiCCM0xiAfXE7MfO4l0AHTLbYwApsASlB8aZTL1GhBjfNjaCRDVqMY5eBcROl9OpffIB8OUAB55C0AHICnKbjraJUwrmVZFw6Z7UfNoM48Vip4tFiGzMEAdLjADHSGTug6qWnpZEEAqgDOAJYAdgDmoAAuABYApqAAKgCeAA6VAMoAxgBOeQ2lZY3VOXU5pZUAtqAAZgD27aAAHOAARnk9AIadFSOVpXmtNEEZmPkFrQA2K3kzAEwADDfSALIAkjV7KRLlpaUNOQBcIEXLcoAVwW0VakxGwCOp3O7QAXgAPWYARmApRy4HmSx6B1xGX2eMJWHEyFJZPJFKgKHEAEF1uVNttdqU+qAaaAALygAByQJGZjZABNBeZQAAhOrDMzIy5GAA04sllTMl1loBMJlA6H4MtAAGpQKqRJzQABmAAsKBZTXFJt5-NAzRBoolUvNAHZ5YqpTKNeqMNqPRBQDLjVzTQBWK2sgDCdr5AvuQJOLqVZlNyK9ruV5s1fq1YH4GdAACpQObjSaZZbrdUACLxh11vIAN1TPoAbFm07M8-6CzJkR2tXNK1zLtGbQBRRuJyYigXZ6UATm7br7mu1yOXoAApOWx2bqegpwBHIErE7LOqT6oAMRNZ-byuR1zXL7f-Z0W+unK5r5ELlSnaIFKlvUAAHETQAGR6Rc01fd9pU-TVv0LV9RQAjAuXGS8cjA2tQAACRNCC4O9ZUbiQxCvwkbU7hMLCTWA0DwMeGCpQo5DqJQtIf3Mf9rkAsoQII1kAClSM4pcqIVJcaNQujCwYwThJYsDxDFZYAHc8nw8CAGlZ1AAAlHJymfMwO1zBVTX9RT2ELaz1RMU1hNmcDoOM6DzMsy5TS9S57NSei7LMAVLmE5cJ0I+5jIAeRmSzTQCuS009YKA0LFLpHdMMzR3cDuWMmkCgXLjfTSqUIz9VCtyCgAyUAI3ymtWXi4yAA1pj82Uqpfd1gpMeigoAPRDPKTXdcCAAVjO5SZyJkiMAsykLCwAQkuFbKxNIKgQKfIigKSpBWPMBKUuq6rs05YSWuh7HoQalKgRBpph6QitJ6LlfzYZFzogJ7gZB8QIJWYYcnukGYeul63o+3obW+hbSjMGpQFe4YypycVlhMDkUCwDGscqHHQF-AB+ENQB+InMBJhFscFXHkVAanfzprATpbSp2nh972k+1lvtKwV0cxpmyZZ0AAG1vrk5YAF0CfpjBGeZ3HZeuBVriV9mKdptXaklzW5Z1kN9Y5o3idN6WteRXWrcNrmGbt8nZcdy2DbZ12MB5vmBcRr7lkSiXSY9hW8dKFXOWNjX7fNp2Dc5+P3Zl7WFWRZ3fbTiOM69vWfZtt384drOc5L-3Kl5-mUFewXheR5ZuvacOpcj5ZFZj1XbbLpOKed1O+47jOLez4u-ZN-vPeT6nc5Hs3Z+962p4Duv0FhrfLvER5hnaCHpmh7eT6QIOhaR6pHjK16TQAa0qOpJnGUA975w-+Yb4PWRm9oa-bs2D8n4vzfgfUo0wCav33h-WWNQlbayVvXBGF9CLcixgAxOQDn5QPfuA9okDQEwLgZ7RBX8UGskIXgk0ABvY21wfhy3dBXBUxtkQMMzoaJWCpqBYEuOwr2pouGYGNqadhlwFTmiETwzA5p2GmgVBGKRgQsARnYeaBUHYlHGw7OwiMCp3RaKwO6dhHYnbcMCAAX0BqfGxiBbqlF0vpTetiXEwHPk3aoqMMGd1KN3Px0d-FRyCcrSBstjYo0WujBB8pwnLC8TUEhMSsARLRgky4Ks5SxNKPE2WgikmYBSVEyR+SMCFISYokp0ccmaMqWU2WBiYmIKQY3S+bIypmGNuyGewTfEBL6T0wJytMnJPTlrAZ-Su4TN6T0xBoSslizMLLGkCC5IIIyfM9pSySGrOzus5JywFlbPSas9JeyCkHM2cswRqzBFnNKRc8WWzJGrMkXc6OhzlmKNWYot5otLmy00aszRvyHmLOWQY1ZBj1lNLIR40AYdOmjLluMlFkzUUx2GQUpF8s0W4umXiwZ+KY4oDmfs0oYctl61WXrEF5K25bOzjspWtKKXLOOeKWWpzamh3pVcoRYpcnMu5XSsFstnkctecK1lssvkcp+VK3lAL+VKpZYqiFHKoWNPca01uHSsBdNHmMglUzCWEq4eE7F6LTUmujrMk0YSyW6vlistkazhVOoFYy11uz3XTEWQK9lbKhWYvuaUD1gqFR8tpeG8VyzJUhujuG2Vnzg1ZPDYC11wLfX0oFeq8FqaYXILhWZco3iM5WpteioR7F+7X0FK9XumAa2GsNtTDGDCS2LISV6tJQiEnXNqGKvtMrh0ZoSeqqloBf7-0eEYIw2rCI+VLQnHx1qK0zIVM2s2daG1xywFuxOVMTYMKXYsi2CTJ3duHey-tw7xXlNHcyhU06WxmFnfO6xriv3gHEGeC8V4WTH2-TYhdrIzx6swAape67jVVoTWKS1sGkNErNSSk0UHE4IepupWmEw8IaVha02C8UGgQYwBh1dlbkNmvg4hlDVH6MbuNge8mO6ERoa5BRmWWG8MnHwlXOWyzHjKuE-rGeFsi7U2I6Rmkcln1-1fe+gTWzhOrNE9ir2E8pPkpk3JqdCm31zuU0JkTzKNNz14-xqeKnTNiZbRwrTIlQICdwnxgjRaiNo0Rd06jDGaMWp84x3zcGOOgGk2YWT4p9EfsI4uqU3n7MwaC8l81IzAtruC3i81oTwORbFF6WCEW5JGDs0vdSCpXP4Wdjh6zuXisKkK3lkr2LKuVAVOparolcPG1a6Bm0ZESNkbZHRjLyX-NpcS5lsbUzUtNqRWx0LXHcY8da8Z2WqmOXqfExZgbumov6ZnUZ6zJm1NmZnpp52u2iv7ZfYZkwx31u2exePZ2q2HsbYFVt+zhdOvOanr15p39+tef1SNvz4PvqzdKWDpLo3stSUG3l6LfXqhkWVAl6DU3Rvdyh7adLEOpvw65LLOr4ovRkWu-l0ridZblcs5UX71Raunkp+TtGTXqce1a+10SjPutYAB844DtjaTCmWHkSYBQgPC+3ij0Ad5kwnBpMKPmZajUpcberZ7usLMcKLlPFdBcdeDwNsvfXed7Pj11z9gThvy4hl1y9232uKYV1Nzbg35nXcrwHhPT322Hc+4c-rf332s5u+psvP3xt15y+V4KQbGOaew4JxigLk3psp8hwmljMs2MJo6v3b6oWFcnCVyr+lnTHunZz0io9nMhQJ722KeTh2s7zpVrLeKhaWmEXj0NpbyKsep9xwh-HWfkN2uJ504UiO9MScqfHuf+3C6L9n83hU4iKZr6b5T2yusd-L5b+WA-Cal8b+aqfmfu+kegFMdvs-6+9+gCYQ-lATShcy5PuIJ0CxgIrFaG2El2ly-xhjl1LxOF-3-0AL9TtyHw1z3VLkt2N0kwHnN0Xhp0Lmt2TlDyXitxN0jwu2d3O3DwILQJDwtzwON0cyjwoIwI9iwKDwkzoKQKoMDxoKd1wMwNIJoKILXhrkDkB3IRtF-0T1B3H2HxCwm0x0z0kKGWY3mxvgRALyRWL0gQgKgIPhgMr31Wr021x1z1xnr1w1EIv1u1nXb3fyMC7x7yB2qF-wHxhzkJS1owkNkPcKnzlmNlMOfwXwTR8Nv1X38JBCP03yvywACL03kTfwiJCIv3URiMwEiP2z0USIwGSOP3vzfGCIWFCJfyvw-wulAO-3QCTBOG2AaBOBvE-2KLAKELhTKLEMgycPcLhxYWkOT2cLaONjjDcOxwYyEWNgbD6NT380gUKxjAVDrBMH7hw2pkaJk2FFZz0370mIqjnSmPuzZDlzKMcJGInyJVHxaP6JC0gQWLMCXGyLZH6jMCuPy0-VqNhnEGbBbD0glylxqMeKejlxeKaPI2ONGJm1cIzxOMJwTV6JBMBNOKkmVCayRTmNAF+NIwcKaxWKWLWPkjnS2JjB+NbD2MhIOPGyxX2K6NtVCyROf0uLnQeK+OBnEHuHnGTEmBANpJunqNaQZN3yT0o0JKBPTxkNBI8PBIBN5Oz1CzR1Z3hK63mPnEGxRPq321WJuMzCO22PZNinnHxIFKhMn2BO1NFKy1C05LyKpI-U+NZJunQBjEl1rn3ihnNItMpGpEImaDyDhEqDZntT1nAldPdKCntWiEDN9I9IVEDOiGDOzh9LdMqDsgDKDOjK3zDODPSSjPdPNGwjliTOjOiKzPdMEVTMqAjAzNllzMqASNLMkQLOHDjPDOjNSNLMUQLMGhrODPv1LM0QLNmGLNLNfx7NIQ81QQTDgJxVaJH1JUwDDIvU5xljZmpgjNw1llx0nJISRVnMdATIXKXMDN7VXINmDLsnYS3OiFvV3LnOjPTMPITWXMkVPPXPdKLMvONmXMUVvNbM3KvO3KVVfOjMGkfKwGXIMW-PdK7MfPgWsBODJiKAqGsFsOEOqCXDgIKD5AWD5k12nhbV-FNwkxQJwu93QNYMTk9MINwuwrwpwMoMTn9Mj3wNItovIvoJlljOIsDzorIpNy4PJnTKwuoJIpQJYK137iLPdx4rYtov4vQrNmrOop4N4rwvErgObOYs01kuYOIJbS7O4rYsYLErUrNh3GEq0pUvktXKPQcxEtYvwoEpbWRDXKj3MpIuMv7l1Gku92UtEvooIvJmRDsmYvwO0r4t0sIvTJcrcv8rksCq8qLKUpkvcvYooq8uHBctYrCssoksIsGl8twpSscusq7JCqyocoipnJ3GisMtEpyrNjuCStIJooCo4plkuFssYOasKvqtxlVE0rctqvCrasNB8rllCvsp6vioauCrQJEuyqKvaqioGoKpYrqpGvasSt9wmtasWsNAytmvmvYLWoYvaryvGp2u2tUt6suBKq2r8pqoWr2rNFMsuqOp0t6uLFKsGvKqmrNCCmqtiu0oqsThykyu+uus8sYrGrMsBuGpusjAMpSqurishuWr11hu6tSrgNNE2rNyRqRt+vJlNAOrBrCp+vetNHOrsuOqxvevNDurmuRuxplnNCaupvJt6vNE+pWtcqGpRqRXNH6tJu6sJuZtBtIq6qZvWvNBmoxoepFpuvNARvupaohuBtxiDBethv5tFrxospipOtFpJphslrhsVuaiprJv1s5sEoZpNuFoNqsrNgjFZsRu2qtrNpbRWgMr5qlsNojEFq1p9utrSvJgjHFtevuu1puojFlrmqdtptxgjHRoJt9udtto1tVoTujual1pTtNrTo7GNrlo9ptsTg7AtrzuOuzvtpLqjveo7B5teuDo8oLvJmci+s1pYuzqDpUvMuzojpNqFvrv9plg7DjsxrKsTsLuTvZvBtHsbozonuSr7oUuNqds7vevdAtqXtnrTvdHLsZo3pXprp3pos3u9sdups3vbpPpHs3u7pDuXt6vdCHonvjr9oUvHrrt3rvpnrfsPvetmFzp3o93WpRDdv-vnqRVmG3sttvsAf3sgffsAePvdrgZutmHPsQe-t6tmG7qtvlqnpllmAfuwageQfHt7ovtwdxlmBntIZwbTuXEXtWqQcNuXDXoYfQfWuik0pLrYZuuXBga4ZqtoePtrqIaYfPuEcYYbplmXGvtkq6toYfpbrkfeuXFftkYEeUc-rUdbvetfD-tgYAZutfGLuHqUd6tfAgfXtMfWtfBgcsfUbMeuAQaGqscMeuFQecfseseuCwY8e0YcYId8YMcNtfBId9pceCeuCobCc8cMYwnyv1vCckdZhsuhuib8esecsOuoZieCe8uAbKsSf7uSaEcjpyaSZDGRDEdKfSdiZkYvsKbgJsoUczoadXORFUfqbKaKYqc0c6ZqeCaqqyZitaacsavyYrtAdGYsYYZGesv8lScfq1rTurE4eGaWZ0e2nyfEaCfKZlB8aOuDuWcuACYOfWbMcuFCdiqFqOaiaueoOWdNHobudcoeZYeec4OsdNAgeRqyoeb4eHuuZ0YtE6oBfuaBaqZ7rBbMdNDqZ+ZeaBeadnt+aBY6bhY+cMeJoWbRbdzMcptWdNqhesfpq2dBe9lxemYJfhdxdsYTsJcMfNCcZHrpeCbFvGY5pxaJf2dIcBdxZOe5eZd2fNEuZwYFe6eRHNFuZFapesYjCealfReCYjDeflY5cMbtvxZvulbVf+cWa0uWa9pBd1Z5ZlYhc1YVd2fDvxa-tVcVcRetbJZlY6ftejzVd6edeWZzo1f-o9eMcnptd2Y7Apbnq1eCerqxe9Z0absOqfvNbFY7HcdgdjcaY7H2Zjf9bjZObTYdcMY7EubQfTeTdufzezeCfdCeeLZddLbeYreWa3qtczqTdXPdB1cIZDd2fdBKYSdFcafdAhdbcbacvdFhdYYLabcReybbbFfdFRZHZLfbd6YnYHdyr0fluauWaAYBtXe7dXPAcNa3cncadmBpb6aXbNnacZf4bnbFZQbZdOYPZ3a5bWfvacvwfDbvdPcItmGFafY-a8soZJffdHacrob3Z-aA+suYYWfEd-eKu+Y7vYOWd4dveDcrd2eXE7cUfA7PeXFNa0dQ7FekfrfBvw8aeXDtbw8Q6dYo50eXDdeo9OuuD0bhb4PWpuF9eY6w8otuENY46vbgJuGPd45I6RRuEZbsb45E7cYA6fuE-7huFTZMc4-JhuEzcU4k7k+uDzcCbTpuCLe0-esavLf09OpSdKv5YQ4M8yYdqlZY5usapbeM9Y-FdA6RYs5M77cc7s6HC9a7fU5bUavHbSdk-8-aZ46C50+3DfdbeC8qsGes-C4M7Gc3YS9Oo6vibfts8NtVGPYy6U4asuAveqZi8os2YBpQ7y-asuEfYKYq8NGObfYneK+U4uaI8a507OoA7a4M8eZc669Oueq2vE8y-Kf8jg9c9Cp0-+ousCdq-8gw5adm6hrM4W788qphaI-3aa4arRuk5mcm6o76a2-asxZVsO507xebpmdm+JbK6u9W8opZrC91eG+6YK8E7u6O8NAZda6fc+4K4Tc2+u4U+e+u9U5B-u+U6FZ8+2fO707vZe-49lae5h4M6Vai9+50-Va+u2dm9duS-h9x87Zx4h4asDqg9+-TfXiAA)
+<h1>TS-8-bit</h1>
+
+<p>Using TypeScript's Type System to do 8-bit Arithmetic</p>
+</div>
 
 ```typescript
 import { 
@@ -8,33 +11,33 @@ import {
 } from './ts-8-bit'
 
 // Arithmetic
-type A = Num< Add < Byte<12>, Byte<22> > >  // (12 + 22)  = 34
-type B = Num< Sub < Byte<47>, Byte<12> > >  // (47 - 12)  = 35
-type C = Num< Mul < Byte<31>, Byte<4>  > >  // (31 * 4)   = 124
-type D = Num< Div < Byte<16>, Byte<8>  > >  // (16 / 8)   = 2
-type E = Num< Mod < Byte<19>, Byte<4>  > >  // (19 % 4)   = 3
+type A = Num< Add < Byte<12>, Byte<22> > >  // type A = 34
+type B = Num< Sub < Byte<47>, Byte<12> > >  // type B = 35
+type C = Num< Mul < Byte<31>, Byte<4>  > >  // type C = 124
+type D = Num< Div < Byte<16>, Byte<8>  > >  // type D = 2
+type E = Num< Mod < Byte<19>, Byte<4>  > >  // type E = 3
 
 // Equality
-type F = Eq < Byte<10>, Byte<10> >          // (10 == 10) = true
-type G = Lt < Byte<10>, Byte<10> >          // (10 < 10)  = false
-type H = Gt < Byte<20>, Byte<10> >          // (20 > 10)  = true
-type I = Lte< Byte<10>, Byte<10> >          // (10 <= 10) = true
-type J = Gte< Byte<20>, Byte<10> >          // (20 >= 10) = true
+type F = Eq < Byte<10>, Byte<10> >          // type F = true
+type G = Lt < Byte<10>, Byte<10> >          // type G = false
+type H = Gt < Byte<20>, Byte<10> >          // type H = true
+type I = Lte< Byte<10>, Byte<10> >          // type I = true
+type J = Gte< Byte<20>, Byte<10> >          // type J = true
 
 // Bitwise
-type K = Num< Rsh < Byte<64>, 3 > >         // (64 >> 3) = 8
-type L = Num< Lsh < Byte<23>, 2 > >         // (23 << 2) = 92
-type M = Num< Or  < Byte<33>, Byte<7> > >   // (33 | 7)  = 39 
-type N = Num< And < Byte<12>, Byte<5> > >   // (12 & 5)  = 4
-type O = Num< Xor < Byte<22>, Byte<17 > > > // (22 ^ 17) = 7
-type P = Num< Not < Byte<253> > >           // (!253)    = 2 unsigned
+type K = Num< Rsh < Byte<64>, 3 > >         // type K = 8
+type L = Num< Lsh < Byte<23>, 2 > >         // type L = 92
+type M = Num< Or  < Byte<33>, Byte<7> > >   // type M = 39 
+type N = Num< And < Byte<12>, Byte<5> > >   // type N = 4
+type O = Num< Xor < Byte<22>, Byte<17 > > > // type O = 7
+type P = Num< Not < Byte<253> > >           // type P = 2
 ```
 
 ## Overview
 
 ts-8-bit is an experimental library that does 8-bit arithmetic on TypeScript's type system. It does so by applying bitwise operations on tuples of length 8 (1 byte) and leverages TypeScript conditional type inference to give the result. This project was written as a exercise in TypeScript and is offered as is for anyone who may find it of use.
 
-Requires TypeScript 4.1.2 and above.
+Requires TypeScript 4.1.2 and above. Example link [here](https://www.typescriptlang.org/play?#code/PTAEFpK6dv4YpcBQJQc6A+rv2d8tM9iTiCCM0xiAfXE7MfO4l0AHTLbYwApsASlB8aZTL1GhBjfNjaCRDVqMY5eBcROl9OpffIB8OUAB55C0AHICnKbjraJUwrmVZFw6Z7UfNoM48Vip4tFiGzMEAdLjADHSGTug6qWnpZEEAqgDOAJYAdgDmoAAuABYApqAAKgCeAA6VAMoAxgBOeQ2lZY3VOXU5pZUAtqAAZgD27aAAHOAARnk9AIadFSOVpXmtNEEZmPkFrQA2K3kzAEwADDfSALIAkjV7KRLlpaUNOQBcIEXLcoAVwW0VakxGwCOp3O7QAXgAPWYARmApRy4HmSx6B1xGX2eMJWHEyFJZPJFKgKHEAEF1uVNttdqU+qAaaAALygAByQJGZjZABNBeZQAAhOrDMzIy5GAA04sllTMl1loBMJlA6BZTTZnNAAGYACwoHXVMX63n80DNEGiiVSo0AdnliqlMo16ow2tZFq5BoArKbWQBhS18gX3IEne1KswG5Guh3Ko2az1asBm0Bhrkyk1ZgAi4etBbyADdY+6AGxJuOzNNejO9XVFrmXYO6gCixcjkxFAuT0oAnLXHQ3NT6u-qDdT0J2AI5AlYnZZ1DvVABi+oXleVyOuo73B8bOknm-1pXaQMq69AAHF9QAZHoDuP7w-S4+a0+Z1kPrnjMuOQ3lmAAS+p3i+brKjcH7vieEhnqA4Fcpe163o8T5StBn5wV+aRIZhqFXiBrIAFIQdhg6wQqg7wd+iG-rqFHEeh4hissADueTAbeADSPagAASjk5S7mYVapgqBpegx7BMdUAlcrMt6PoJj6ieJlwGq6lyyakSFqVyQ7tlm9yCQA8jM4kGjptFxi6+negpoDmf6Q6BFm3KCTSBT9jhHr2VKAaet+SHeVy+ashZgkABrTFpspBXuTr6SYSExVyTq3gACoJ3KTFB1EBjpTkGS5eVtrOYCUrVdV1exywkvVLWtQg1KVAiDTTD0WYcT0XLXNIyLVRAbXjRN4h3isww5M1E0LfVHVdT1zbmssBWlGYNSgJ1wx+Tk4rLCYHIoFgO17ZUB2gENAD8oDIqAPxnZgF0IvtgqHY991Dc9WAFJUZaVO0y3de0vW+ssvmCttu3vVdn2gAA2v1tHLAAuidL0YG9H2HUj1wKtc6OgD9T3Y7UcN48jhMPSTZN-a9VMI-jyJE-TN3k+dzPXUjbN06TD1c5gANAyDKCdWDEO6v1Vmw5dvOo0dpSY5yFO4yzNPs4Lv3qzziMEwqyIc49jM4-rrPa-dpt6wrBv88bgs2-9gPA6Dq19cs8XtPL8OK8saMq1j3N2-jtPEzrwvm6HWsC9bUeUzHfNW0LZuJ379tGxzusu2Lo2LQXtXiI8wztDN0zzYXVdIO74NraAjx+Z1+oANaVHUkzjA3pflyDkse6yOXtIDvvU23HddyXwO9yd3fT6U0xIzU6ME+jEsrXXXl7aPmvj53c9lwv7Sz1Ph+L8vfNr-3m+sqfvf6gA3hT1w-MjTpZwqFPIq-hugJc6MKmoFgS4P9+YGgAZgCmBof6XAVEaCBQDMBGh-gaBUAYEGBCwAGH+RoFRVgwRTKsP8AwKidAQrATof5VnZoAwIABffO1cmHtXQP1bivF0DMK4bAWu0tqibR3v7UogcRHK1EUrCRGNZ5Iwpv1ARNRV7ylkRtQq21L5KKwHI1RCj-4aMwForaCjwF6IwAYtR8CTHK3kUjdBlizEKPwXYlRhikZkKUWvdeUt67QzMBTdkSdJHCLEcEwJ4iMZylkRbZGoSQkB1iUEwJa9pHKNKD4pGNJV60VXpjCJmioZ+TMOky+WTjY5JSWkjJ-8sn-zKXk1JBSingKyeA2p+j8kwyKfArJ8DWmmPaYUjJ6CsnoN6crCpSN8FZPwaM-q4yyFZLIWUjx18+GgDln4qJKM4kxJ2dsvZKtcn6M2bshJ+ywmnJVigZJdS5ZFOJlk4mMzli3IycbEp6MnmlBeUjKp4ofkfKcV8n2jSIFiiRi0wF3yul-J6ZC4FgzQU2IBYcvpQKBkTMRdMuF6L5l-MWe43h9dva+KwP4jO+MTnnKpcrABkSAlnPidSxJVz9QyLqcSlGmS2TZMBRysFbzuWlN5dMQpYLfmVORSkvl4KIEZIhSi5W0roUZNhQq-q0qhncpGcK4FYLJncqxWqr2IrOW4oyfiiJyyN6rJEuUQRBtKWMqdf1CBmEY6N0FJ1YOmA3Xks5vdHar9bWFIUQKnRECjERqRtChRmqHFRtxfc0AQ8R6PCMEYQlWYNJ2o1kIplDKTmuqiR6r1assC+upndSmr9s2FNpgopNoao2-MjQqBRMakVtoxRAlNZYzBpozYw7hw7xALiXCuFkldh3MMzayBcJLMBkuplsi5+bV3xNpZo45Bad3ruZbPJdmsLT3TQtUV+gETi8U8QPXUz4LINAXRgQ9ebnW7vOZuo59K91vtfQcimFbNYloRCyrkz7EbHomEBM9FMimPERXBkmSdw4czvQ+mktEFS9v7emhOsH4MfM2Q7FDXy0MYeTcPPtA7cMZLg1khDhGU4XuAtRpGtG-n0aQ1nQWp6E5MZvNem+t6tobK-WusTNK1Xbu-dJtdtLZ6obMOh8UpDB0rPrs+ZUIm-UrvE46l1knRO-t0+EkDyN51KbFK6Z8inaJGEQ9p09Co+Mcx42nJG5nbMKmsxZuzmy+MKlPS5kiT1MGYD47O3UkF72Pr1IZvTP79N0u0-FmTG6FUAeukB0zYHDoQb4yxtjYKOPaeQ4LKLpHlPkdTThtzNH8P2eXURsrJGbOVaw1R2rrH6ubNpo7e6+XOuFa6w1zWycbpBevLxqDEXqiQRizl6JCWlsXI-aYqTxnUuJdnuV1rYoVMzfvFKLTy6UsbdW+KdbRmrtbdZR58Uro5s+ZG7zRzkHL2VAm9BrA7n5y7Ye1tJ7fmoMBZIp9kLFNwtTundXWkwplh5EmAUKH0PC4HY3NGE4NJhTA3tRS3dqtTohxK0TFOv8I5p1zZnG6pP+bk9tsTh6NPtYU4Y4z8bgtf6OxZ5x6ncdka05Jtz7TtOuP3U54L+ny7eui9jlzyXo2HYy7G3L3ObsBOrKx4KaLx3RuneuyZrdcXluyfS8WpuCIFUxRjv1Uz6OTiY+x8CvxXW6PnYy4jKtv0hRa4q3tqrlHXSJhQJjJGFkrVeKzJr+bl29eFoM8l43+vLnXMXcKaLFmSc3UsZr9PZHafZ7T77hUsCs8Kpz0Xw0RMC8+923AqvZfC+19ACQ0vfjG8Z9ANQ1vpL29kffq3jxnCUczvQLaBYl4VitG2Ij5Hw+Fpo4x2PifU+RWU7x9Jgn8vebh1J6VoXjXM8RzFwLhOa-ZdM4FvvhXRtd-M63wbHffPlcS6Jwf3nfXY509f6N6XT-esv6ZiTkVyfyazTlFjVzUyzDH211JRj0TzjySxO3gOWzdzN09Qtwpitz9Rt1njtxOCXzLhXyd1JRd3Y1QJjk9xC2gIr3a0DwzRDzDwOzH2jyN02xQPjyQLYK4MDiSVZQpmoKb3DksQEI73zwVRELIxLwPHEJBFz0q1QW70wAkMq1wUUIwGUL9xb2kP4NkIry720KwA0NIXr2DyHTn1R3QCjBOG2AaBODXCH3MNR3V3risJgMXTgO4N-QgUQN12QK4POzDFYI23fU-iwCLCCKTxCNM2sxDAVALBMBjh43ulcLQ2FD+zIyj1iICnTTiJMFfhpAOysJYIT08JS3OwtAiNj32Tk31BSLMEHGkLZGSjMEaMszMMcPn3QFLDLB4gRyRwcI6Pn2cMLHLDcKfQ8OCLSx8JfSqI3wVUCJKMmIQO2ylB8yiSSNAG6Oi2YJ8wyLSKyLonTTyOzAO26OKM4KWPxw4N8NKJQNMy2IrwaPTXaMGLanEHuD7GjEmFn1eIamGNZA+Jrx1xmL8KiMN0WMiK8PmImMhMSQiRWOVDWMSOC2SL7G2JBHSMq0yOaMTBqzZEKL7HOJuMuLmOmIdVBK8NM0BLkL9yeMHQGN+NanEBDERzFlLjmgZMZKWlvGaDyDhEqEelZWJh5L5MqD0lZWiElN5P5P5klOiGlIFLXigNFJkglKlNFJLzlIVP-hFP5KNAwC5CRi1JVIVGNP5PAV1MqADANORjNMqFULtPgUtKrBtKNPVP5JbztPQUtNSjVPlNFK7ztPwUtNmFdLtP73DKvmtXritFx0W1uP8JTwwDlIbWe0Rm+htFFNNmRnOxTMviiQzO1JCyRlzMlPDQLMFgVJkh-lLOiEjQrPugVP1JrIVTzPgQbMzI9OLNrNjTTK+krIDO7NbLLIxQ7IVNShbIpjzLITHNFNDMnJXmsBOCuiKAqGsHDxvXNDjDPwKD5AWGBm9Wjj9SGg50fzPMPzv2-2ukFOPwvN53PPZyv2unFLF1-wfLPIAKPOplVNvLZ3fMP0-PTmpn1NPMzxF3vIAtPyiWtI53AvAvfMArPxdNArZ3grvK-0AL9V9N-OAP-MfPv0OlDJQsfzQvvMQqiQ8lgrvNIr3wIoeirU5zAvQsvMwupmRAzOVyYogrIqgpjhlGIpvz-PQvIr4pkl-N-xopYq-M1mRH1NfMEtwuEt4r9WRGtJwoUuYvwqvPTJdPku4rfMgqfPTNSnEuoqUqMq+lDL0tIpopEpUo8nUu4tsuUupjuD0oMqEp4osr-g4rgq4o-Jcs1lVBQsUs8tou0sOm0iotQv8sMrosuDks-y4ucu8suDUv5zMrCqkqAqCt0vP3f0EoCtSpMoys8tCvCtYqCqsqSpiqyq0squfIctKoksKrioisNAYpatqqKrooTGiuAPKuyrPwND0ncs0vgrsu-LEuavGraoasRmNBCtmq8t6vSs4v0tavqukuugNDyrJ02o8owu2oWpKrG0OoOsms1gNGqsYrqomsCp2qavWpsrmuOsOiNE6sysOsuuuiNF8q+ouoesRiNFGvyo8vuu8qNGmvWvBtepyt+sSv2u6sBshrWr8rKrhrPyND2q6vRoqretAGdH6o0oKpWvaqNBurwvKp+uBqeskuRq2vhsRgDE+rupRrooDH+rZrCppsOgDFBqRvRoho5uhrxpJvxqZr5sRq6plqGugrRvFsVsZrPwDBxsyupqBr5tOpeoZqOslub0ps2oGsxugrpqNqVr1qQtZtxvZvaqrC5ptp5s1s7wFsdo1u8qrFFpJuNrJvmsOkkgEo2tJstqiSrAVqDpIrlpjirDVrqsjuVtDu1oOq+t5s70NuDpTudqrDNozqcqjqwtZsGuDtTqdC5qLrfJLtdoBuLudqdC9rzobpDpjidGlvNsbpLvDrFpru8qdFjtlu7roqdCTtJp1qbqwvTp9vjrHupidBzsnv8tTtmGturpP28pRGiofLxsXqru5orudtmHrtHsKsXtbtzq3v3vDthoHvatmFjtCvPrXuHvvoXv3vTvjofrotmBzvfpfu8qHELuSt-roqHDLsAevr9tABMkDvnr-NTqHHrsdr3r-tPp9o-vaqHE7u9qAfQb7uWtXuAeHqpuPudqHAnrwfzupiHDnvIYTr4uuGXu5vwfav3AduTu6tTv3B3qLtwo4euEPrYZ4edv3FPqnvFt4cvtivYaEeuDvskcEe8v3CfrkeIYUeuDfqVvkbov3G-o0ZUa0f3CWoZs0eYfYuJqMb0ZMZ3s3rEaEeRAQfVosYgfYpQYcdgdscwYbuMaceRFwYxqkYUeREIbbq8YJvYrIb8ZCf1vYuoYiccdCbcpqrdooZksuFYZHpsYUeCusrAcibPxlH4fSf8a0YSugawbccyYkdqsno4cuFkaqYyeKaUfqaKeYcuHUYjrApqZ0Y6ffw4YNAAZ6f-yEb6scrwqGYUZGtKZ6ZVycdsg3rYZIr6Zcbjs6eGY8fpvGa0d2sDvOt6eGaCdzsWeGfCd2c2eYYNBidOa4wUY+qmfppmdCb+vmd1tWZua4Yttea0ahrMfLuua+ZEerrOacaNEqdEb2ZubqbBaBceaaahb+eYYpqmd2YeaiaNG6a7uhaiZZsMYxfhacc5p+ckcxbyf5p2Y+cvy0ZKmef7uJYLIDGWZpbxdCYDA8cZYpeYdVruYEY4YDAOZgdpb4oDHCf5aZaxZiZFfZacarAYesfBa0ftupZXo4arHeaDrguVYKdlYFZUoDrGt3tFbybDueaPsldCZjpxaVaEarCaZNZRcNfaavu1bYuzsVb8adZkqdAGcdYNYLNLrMe9dNaiadCsd0bleYbruNbbvdevJbotbdZ9b4qdHWajYTZUt7rJcKejeMoOZ-rDacadBObAaza+lnv9aLdTbYqXqRY0Y4fXtMtibzdCdmFVaFs+eYYPsJczYrZktmABcKfVaEdmFBbKeLYelvsMcQe7evNmFhZHanfTNmHadQbbaca-sjeadHeRH-rjZgbtYLJAc7d3Y4agb1aIcDbyfgdddlb3b4qHAZbwePdZYfaEaHF8fufna+iHD5efYUdIbjevePfFZ-fivoYzZ1pvb9RuDSeRY-b-luAnYEdg5uE1cQ-PaiRuD7e4aQ+uEqaw7Q5jhuDqbw4g9cuuBtdQ5I6CrUYzavso+fOuG6bBdAPioMeycboUtTtSdAfY9Qs4-4r1a7uY-atSfsfjd4+dtSeWcE6Q9Us7do7498f7qE4gdSZzdDbo8RlScLfMfw8g63bLZ0408ioScFvU849SfXeft09cqyfyt3aQ6iscvs+s6CpKdPdcaM7-jSqvZyfM8hY8-M9nc8Yc6XYC4k8uHRbC9Sv6f-d84k5GdKuI6Q8mfc4bc8+0lE9o+S-vbS848DAM9bZc+fO2YE+CeS+-dy-i+FbK6K804ucPbi9StudS7ds46efrdzeU4JoStVc66Q++dGZyf68w6G9q8ipBfXda4k+xti+afS6Jqc9G-m4dbKa6-1oSsY9W6Q+xbY6SbG7-gJcG7m+25DeO-E9SqpfreXfO-ivpZ3dW845ZYa7m8AvAPaCAA).
 
 License MIT
 
@@ -46,7 +49,9 @@ The following demonstrates basic usage.
 import { Byte, Num, Add } from './ts-8-bit'
 
 // ------------------------------------------------------------------------
+//
 // Use Byte<T> and Num<T> to map between bytes and numbers
+//
 // ------------------------------------------------------------------------
 
 type A = Byte<127>                           // type A = [1, 1, 1, 1, 1, 1, 1, 0]
@@ -56,7 +61,9 @@ type B = Num<[1, 1, 1, 1, 1, 1, 1, 0]>       // type B = 127
 type C = Num< Byte<55> >                     // type C = 55
 
 // ------------------------------------------------------------------------
+//
 // ... with math is done exclusively on bytes
+//
 // ------------------------------------------------------------------------
 
 type D = Add<                                // type D = [0, 1, 1, 1, 1, 1, 1, 1]
@@ -65,7 +72,9 @@ type D = Add<                                // type D = [0, 1, 1, 1, 1, 1, 1, 1
 >
 
 // ------------------------------------------------------------------------
+//
 // ... but can be remapped this way.
+//
 // ------------------------------------------------------------------------
 
 type E = Num< Add< Byte<127>, Byte<127> > >  // type E = 254
