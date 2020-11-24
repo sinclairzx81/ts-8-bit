@@ -87,7 +87,7 @@ type E = Num< Add< Byte<127>, Byte<127> > >  // type E = 254
 
 type FizzBuzz<T extends Byte<any>> = 
      Mod<T, Byte<5>> extends Byte<0> ? 
-         Mod<T, Byte<3>> extends Byte<0> ? 'fizzbuzz' : 'buzz' :
+     Mod<T, Byte<3>> extends Byte<0> ? 'fizzbuzz' : 'buzz' :
      Mod<T, Byte<3>> extends Byte<0> ? 'fizz' :
      ''
 
