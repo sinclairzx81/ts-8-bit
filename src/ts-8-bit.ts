@@ -56,14 +56,14 @@ export type Index = keyof Iterator
 export type Prev<T extends keyof Iterator> = Iterator[T][0]
 export type Next<T extends keyof Iterator> = Iterator[T][1]
 export type Iterator = {
-    0: [7, 1], 
-    1: [0, 2],   
-    2: [1, 3],   
-    3: [2, 4],   
-    4: [3, 5],   
-    5: [4, 6],   
-    6: [5, 7],   
-    7: [6, 0],   
+    0: [7, 1],
+    1: [0, 2],
+    2: [1, 3],
+    3: [2, 4],
+    4: [3, 5],
+    5: [4, 6],
+    6: [5, 7],
+    7: [6, 0],
 }
 
 // -------------------------------------------------------------------------
@@ -84,44 +84,44 @@ export type Not<T extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit]> = [
 export type And<
     A extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit],
     B extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit]
-> = [
-    BitAnd<[A[0], B[0]]>,
-    BitAnd<[A[1], B[1]]>,
-    BitAnd<[A[2], B[2]]>,
-    BitAnd<[A[3], B[3]]>,
-    BitAnd<[A[4], B[4]]>,
-    BitAnd<[A[5], B[5]]>,
-    BitAnd<[A[6], B[6]]>,
-    BitAnd<[A[7], B[7]]>,
-]
+    > = [
+        BitAnd<[A[0], B[0]]>,
+        BitAnd<[A[1], B[1]]>,
+        BitAnd<[A[2], B[2]]>,
+        BitAnd<[A[3], B[3]]>,
+        BitAnd<[A[4], B[4]]>,
+        BitAnd<[A[5], B[5]]>,
+        BitAnd<[A[6], B[6]]>,
+        BitAnd<[A[7], B[7]]>,
+    ]
 
 export type Or<
     A extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit],
     B extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit]
-> = [
-    BitOr<[A[0], B[0]]>,
-    BitOr<[A[1], B[1]]>,
-    BitOr<[A[2], B[2]]>,
-    BitOr<[A[3], B[3]]>,
-    BitOr<[A[4], B[4]]>,
-    BitOr<[A[5], B[5]]>,
-    BitOr<[A[6], B[6]]>,
-    BitOr<[A[7], B[7]]>,
-]
+    > = [
+        BitOr<[A[0], B[0]]>,
+        BitOr<[A[1], B[1]]>,
+        BitOr<[A[2], B[2]]>,
+        BitOr<[A[3], B[3]]>,
+        BitOr<[A[4], B[4]]>,
+        BitOr<[A[5], B[5]]>,
+        BitOr<[A[6], B[6]]>,
+        BitOr<[A[7], B[7]]>,
+    ]
 
 export type Xor<
     A extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit],
     B extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit]
-> = [
-    BitXor<[B[0], A[0]]>,
-    BitXor<[B[1], A[1]]>,
-    BitXor<[B[2], A[2]]>,
-    BitXor<[B[3], A[3]]>,
-    BitXor<[B[4], A[4]]>,
-    BitXor<[B[5], A[5]]>,
-    BitXor<[B[6], A[6]]>,
-    BitXor<[B[7], A[7]]>,
-]
+    > = [
+        BitXor<[B[0], A[0]]>,
+        BitXor<[B[1], A[1]]>,
+        BitXor<[B[2], A[2]]>,
+        BitXor<[B[3], A[3]]>,
+        BitXor<[B[4], A[4]]>,
+        BitXor<[B[5], A[5]]>,
+        BitXor<[B[6], A[6]]>,
+        BitXor<[B[7], A[7]]>,
+    ]
 
 export type Rsh<T extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit], I extends Index> =
     I extends 0 ? T : Rsh<[T[1], T[2], T[3], T[4], T[5], T[6], T[7], 0], Prev<I>>
@@ -137,13 +137,13 @@ export type Lsh<T extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit], I extends In
 export type Eq<
     A extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit],
     B extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit]
-> = A extends B ? true : false
+    > = A extends B ? true : false
 
 export type LtOp<
     A extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit],
     B extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit],
     I extends Index
-> = A extends B ? false :
+    > = A extends B ? false :
     [A[I], B[I]] extends [0, 0] ? LtOp<A, B, Prev<I>> :
     [A[I], B[I]] extends [1, 1] ? LtOp<A, B, Prev<I>> :
     [A[I], B[I]] extends [1, 0] ? false :
@@ -153,20 +153,20 @@ export type LtOp<
 export type Lt<
     A extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit],
     B extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit],
-> = LtOp<A, B, 7>
+    > = LtOp<A, B, 7>
 
 export type Lte<
     A extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit],
     B extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit],
-> = [Eq<A, B>, Lt<A, B>] extends [true, false] ? true :
-    [Eq<A, B>, Lt<A, B>] extends [false, true] ? true : 
+    > = [Eq<A, B>, Lt<A, B>] extends [true, false] ? true :
+    [Eq<A, B>, Lt<A, B>] extends [false, true] ? true :
     false
 
 export type GtOp<
     A extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit],
     B extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit],
     I extends Index
-> = A extends B ? false :
+    > = A extends B ? false :
     [A[I], B[I]] extends [0, 0] ? GtOp<A, B, Prev<I>> :
     [A[I], B[I]] extends [1, 1] ? GtOp<A, B, Prev<I>> :
     [A[I], B[I]] extends [0, 1] ? false :
@@ -176,13 +176,13 @@ export type GtOp<
 export type Gt<
     A extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit],
     B extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit],
-> = GtOp<A, B, 7>
+    > = GtOp<A, B, 7>
 
 export type Gte<
     A extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit],
     B extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit],
-> = [Eq<A, B>, Gt<A, B>] extends [true, false] ? true :
-    [Eq<A, B>, Gt<A, B>] extends [false, true] ? true : 
+    > = [Eq<A, B>, Gt<A, B>] extends [true, false] ? true :
+    [Eq<A, B>, Gt<A, B>] extends [false, true] ? true :
     false
 
 // -------------------------------------------------------------------------
@@ -205,24 +205,24 @@ export type AddOp<
     B extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit],
     I extends Index,
     O extends Bit
-> = FullAdder<[
-    A[I], B[I],
-    I extends 0 ? 0 : AddOp<A, B, Prev<I>, 1>
-]>[O]
+    > = FullAdder<[
+        A[I], B[I],
+        I extends 0 ? 0 : AddOp<A, B, Prev<I>, 1>
+    ]>[O]
 
 export type Add<
     A extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit],
     B extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit]
-> = [
-    AddOp<A, B, 0, 0>,
-    AddOp<A, B, 1, 0>,
-    AddOp<A, B, 2, 0>,
-    AddOp<A, B, 3, 0>,
-    AddOp<A, B, 4, 0>,
-    AddOp<A, B, 5, 0>,
-    AddOp<A, B, 6, 0>,
-    AddOp<A, B, 7, 0>,
-]
+    > = [
+        AddOp<A, B, 0, 0>,
+        AddOp<A, B, 1, 0>,
+        AddOp<A, B, 2, 0>,
+        AddOp<A, B, 3, 0>,
+        AddOp<A, B, 4, 0>,
+        AddOp<A, B, 5, 0>,
+        AddOp<A, B, 6, 0>,
+        AddOp<A, B, 7, 0>,
+    ]
 
 // -------------------------------------------------------------------------
 // Subtraction
@@ -244,24 +244,24 @@ export type SubOp<
     B extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit],
     I extends Index,
     O extends Bit
-> = FullSubtractor<[
-    A[I], B[I],
-    I extends 0 ? 0 : SubOp<A, B, Prev<I>, 1>
-]>[O]
+    > = FullSubtractor<[
+        A[I], B[I],
+        I extends 0 ? 0 : SubOp<A, B, Prev<I>, 1>
+    ]>[O]
 
 export type Sub<
     A extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit],
     B extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit]
-> = [
-    SubOp<A, B, 0, 0>,
-    SubOp<A, B, 1, 0>,
-    SubOp<A, B, 2, 0>,
-    SubOp<A, B, 3, 0>,
-    SubOp<A, B, 4, 0>,
-    SubOp<A, B, 5, 0>,
-    SubOp<A, B, 6, 0>,
-    SubOp<A, B, 7, 0>,
-]
+    > = [
+        SubOp<A, B, 0, 0>,
+        SubOp<A, B, 1, 0>,
+        SubOp<A, B, 2, 0>,
+        SubOp<A, B, 3, 0>,
+        SubOp<A, B, 4, 0>,
+        SubOp<A, B, 5, 0>,
+        SubOp<A, B, 6, 0>,
+        SubOp<A, B, 7, 0>,
+    ]
 
 // -------------------------------------------------------------------------
 // Multiply
@@ -270,27 +270,57 @@ export type Sub<
 export type MulOp<
     A extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit],
     B extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit],
-    I extends Index
-> = I extends 0 ? B : MulOp<A, Add<A, B>, Prev<I>>
+    C extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit],
+    D extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit],
+    > = Lt<C, D> extends true ? MulOp<Add<A, B>, B, Add<C, Byte<1>>, D> : A
 
 export type Mul<
     A extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit],
-    B extends Index
-> = MulOp<A, Byte<0>, B>
+    B extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit],
+    > = MulOp<Byte<0>, A, Byte<0>, B>
 
+// -------------------------------------------------------------------------
+// Division
+// -------------------------------------------------------------------------
+
+export type DivOp<
+    A extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit],
+    B extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit],
+    C extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit],
+    > = Gte<A, B> extends true ? DivOp<Sub<A, B>, B, Add<C, Byte<1>>> : C
+
+export type Div<
+    A extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit],
+    B extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit]
+    > = DivOp<A, B, Byte<0>>
+
+// -------------------------------------------------------------------------
+// Modulo
+// -------------------------------------------------------------------------
+
+export type ModOp<
+    A extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit],
+    B extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit],
+    C extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit],
+    > = Gte<A, B> extends true ? ModOp<Sub<A, B>, B, Add<C, Byte<1>>> : A
+
+export type Mod<
+    A extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit],
+    B extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit]
+    > = ModOp<A, B, Byte<0>>
 
 // -------------------------------------------------------------------------
 // Converters
 // -------------------------------------------------------------------------
 
-type Size1  = [0]
-type Size2  = [...Size1, ...Size1]
-type Size3  = [...Size2, ...Size2]
-type Size4  = [...Size3, ...Size3]
-type Size5  = [...Size4, ...Size4]
-type Size6  = [...Size5, ...Size5]
-type Size7  = [...Size6, ...Size6]
-type Size8  = [...Size7, ...Size7]
+type Size1 = [0]
+type Size2 = [...Size1, ...Size1]
+type Size3 = [...Size2, ...Size2]
+type Size4 = [...Size3, ...Size3]
+type Size5 = [...Size4, ...Size4]
+type Size6 = [...Size5, ...Size5]
+type Size7 = [...Size6, ...Size6]
+type Size8 = [...Size7, ...Size7]
 export type Num<T extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit]> = [
     ...T[0] extends 1 ? Size1 : [],
     ...T[1] extends 1 ? Size2 : [],
@@ -303,16 +333,16 @@ export type Num<T extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit]> = [
 ]['length']
 
 export type Byte<T extends number> =
-    T extends 0  ? [0, 0, 0, 0, 0, 0, 0, 0] :
-    T extends 1  ? [1, 0, 0, 0, 0, 0, 0, 0] :
-    T extends 2  ? [0, 1, 0, 0, 0, 0, 0, 0] :
-    T extends 3  ? [1, 1, 0, 0, 0, 0, 0, 0] :
-    T extends 4  ? [0, 0, 1, 0, 0, 0, 0, 0] :
-    T extends 5  ? [1, 0, 1, 0, 0, 0, 0, 0] :
-    T extends 6  ? [0, 1, 1, 0, 0, 0, 0, 0] :
-    T extends 7  ? [1, 1, 1, 0, 0, 0, 0, 0] :
-    T extends 8  ? [0, 0, 0, 1, 0, 0, 0, 0] :
-    T extends 9  ? [1, 0, 0, 1, 0, 0, 0, 0] :
+    T extends 0 ? [0, 0, 0, 0, 0, 0, 0, 0] :
+    T extends 1 ? [1, 0, 0, 0, 0, 0, 0, 0] :
+    T extends 2 ? [0, 1, 0, 0, 0, 0, 0, 0] :
+    T extends 3 ? [1, 1, 0, 0, 0, 0, 0, 0] :
+    T extends 4 ? [0, 0, 1, 0, 0, 0, 0, 0] :
+    T extends 5 ? [1, 0, 1, 0, 0, 0, 0, 0] :
+    T extends 6 ? [0, 1, 1, 0, 0, 0, 0, 0] :
+    T extends 7 ? [1, 1, 1, 0, 0, 0, 0, 0] :
+    T extends 8 ? [0, 0, 0, 1, 0, 0, 0, 0] :
+    T extends 9 ? [1, 0, 0, 1, 0, 0, 0, 0] :
     T extends 10 ? [0, 1, 0, 1, 0, 0, 0, 0] :
     T extends 11 ? [1, 1, 0, 1, 0, 0, 0, 0] :
     T extends 12 ? [0, 0, 1, 1, 0, 0, 0, 0] :
