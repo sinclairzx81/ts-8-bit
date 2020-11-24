@@ -1,30 +1,16 @@
-/*--------------------------------------------------------------------------
-
-ts-8-bit: Using TypeScript's Type System to do 8-bit Arithmetic
-
-The MIT License (MIT)
-
-Copyright (c) 2020 Haydn Paterson (sinclair) <haydn.developer@gmail.com>
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
-
----------------------------------------------------------------------------*/
+// -------------------------------------------------------------------------
+//       _______ _____       ___        _     _ _   
+//      |__   __/ ____|     / _ \      | |   (_) |  
+//         | | | (___ _____| (_) |_____| |__  _| |_ 
+//         | |  \___ \______> _ <______| '_ \| | __|
+//         | |  ____) |    | (_) |     | |_) | | |_ 
+//         |_| |_____/      \___/      |_.__/|_|\__|
+//                                             
+//    Using the TypeScript type system for 8-bit arithmetic
+//
+//                    sinclair 2020 | MIT                                         
+//                                        
+// -------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------
 // Bit
@@ -33,7 +19,7 @@ THE SOFTWARE.
 export type Bit = 0 | 1
 
 // -------------------------------------------------------------------------
-// Bit gates
+// Gates
 // -------------------------------------------------------------------------
 
 export type BitNot<T extends Bit> =
@@ -127,21 +113,21 @@ export type Xor<
     A extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit],
     B extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit]
 > = [
-    BitXor<[A[0], B[0]]>,
-    BitXor<[A[1], B[1]]>,
-    BitXor<[A[2], B[2]]>,
-    BitXor<[A[3], B[3]]>,
-    BitXor<[A[4], B[4]]>,
-    BitXor<[A[5], B[5]]>,
-    BitXor<[A[6], B[6]]>,
-    BitXor<[A[7], B[7]]>,
+    BitXor<[B[0], A[0]]>,
+    BitXor<[B[1], A[1]]>,
+    BitXor<[B[2], A[2]]>,
+    BitXor<[B[3], A[3]]>,
+    BitXor<[B[4], A[4]]>,
+    BitXor<[B[5], A[5]]>,
+    BitXor<[B[6], A[6]]>,
+    BitXor<[B[7], A[7]]>,
 ]
 
-export type Lsh<T extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit], I extends Index> =
-    I extends 0 ? T : Lsh<[T[1], T[2], T[3], T[4], T[5], T[6], T[7], 0], Prev<I>>
-
 export type Rsh<T extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit], I extends Index> =
-    I extends 0 ? T : Rsh<[0, T[0], T[1], T[2], T[3], T[4], T[5], T[6]], Prev<I>>
+    I extends 0 ? T : Rsh<[T[1], T[2], T[3], T[4], T[5], T[6], T[7], 0], Prev<I>>
+
+export type Lsh<T extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit], I extends Index> =
+    I extends 0 ? T : Lsh<[0, T[0], T[1], T[2], T[3], T[4], T[5], T[6]], Prev<I>>
 
 // -------------------------------------------------------------------------
 // Addition
@@ -518,4 +504,3 @@ export type Byte<T extends number> =
     T extends 254 ? [0, 1, 1, 1, 1, 1, 1, 1] :
     T extends 255 ? [1, 1, 1, 1, 1, 1, 1, 1] :
     never
-
