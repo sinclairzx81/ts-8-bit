@@ -96,7 +96,8 @@ type T3  = FizzBuzz< Byte<3> >     // type T3 = "fizz"
 type T4  = FizzBuzz< Byte<4> >     // type T4 = ""
 type T5  = FizzBuzz< Byte<5> >     // type T5 = "buzz"
 type T6  = FizzBuzz< Byte<6> >     // type T5 = "fizz"
+//
 // ... etc etc
+//
 type T15 = FizzBuzz< Byte<15> >    // type T15 = "fizzbuzz"
-
 ```
