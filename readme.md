@@ -46,7 +46,7 @@ License MIT
 The following demonstrates basic usage.
 
 ```typescript
-import { Byte, Num, Add } from './ts-8-bit'
+import { Byte, Num, Add, Mod } from './ts-8-bit'
 
 // ------------------------------------------------------------------------
 //
@@ -100,4 +100,38 @@ type T6  = FizzBuzz< Byte<6> >     // type T5 = "fizz"
 // ... etc etc
 //
 type T15 = FizzBuzz< Byte<15> >    // type T15 = "fizzbuzz"
+
+// ------------------------------------------------------------------------
+//
+// ... or something more elaborate like this ...
+//
+// ------------------------------------------------------------------------
+
+type IsPrimeOp<
+    A extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit],
+    B extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit]
+> = Num<B>         extends 1 ? true  : 
+    Num<Mod<A, B>> extends 0 ? false : 
+    IsPrimeOp<A, Sub<B, Byte<1>>>
+
+type IsPrime<
+    A extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit]
+> = IsPrimeOp<A, Sub<A, Byte<1>>>
+
+type P0  = IsPrime< Byte<3> >      // true
+type P1  = IsPrime< Byte<4> >      // false
+type P2  = IsPrime< Byte<5> >      // true
+type P3  = IsPrime< Byte<6> >      // false
+type P4  = IsPrime< Byte<7> >      // true
+type P5  = IsPrime< Byte<8> >      // false
+type P6  = IsPrime< Byte<9> >      // false
+type P7  = IsPrime< Byte<10> >     // false
+type P8  = IsPrime< Byte<11> >     // true
+type P9  = IsPrime< Byte<12> >     // false
+type P10 = IsPrime< Byte<13> >     // true
+type P11 = IsPrime< Byte<14> >     // false
+type P12 = IsPrime< Byte<15> >     // false
+type P13 = IsPrime< Byte<16> >     // false
+type P14 = IsPrime< Byte<17> >     // true - pushing recursion limits here
+type P15 = IsPrime< Byte<18> >     // false
 ```
