@@ -103,7 +103,7 @@ type T15 = FizzBuzz< Byte<15> >    // type T15 = "fizzbuzz"
 
 // ------------------------------------------------------------------------
 //
-// ... or something more elaborate like this ...
+// ... or something more elaborate ...
 //
 // ------------------------------------------------------------------------
 
@@ -134,4 +134,5 @@ type P12 = IsPrime< Byte<15> >     // false
 type P13 = IsPrime< Byte<16> >     // false
 type P14 = IsPrime< Byte<17> >     // true - pushing recursion limits here
 type P15 = IsPrime< Byte<18> >     // false
+
 ```
