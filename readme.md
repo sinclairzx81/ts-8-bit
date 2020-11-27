@@ -116,21 +116,21 @@ type IsPrime<
     A extends [Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit]
 > = IsPrimeOp<A, Sub<A, Byte<1>>>
 
-type P0  = IsPrime< Byte<3> >      // true
-type P1  = IsPrime< Byte<4> >      // false
-type P2  = IsPrime< Byte<5> >      // true
-type P3  = IsPrime< Byte<6> >      // false
-type P4  = IsPrime< Byte<7> >      // true
-type P5  = IsPrime< Byte<8> >      // false
-type P6  = IsPrime< Byte<9> >      // false
-type P7  = IsPrime< Byte<10> >     // false
-type P8  = IsPrime< Byte<11> >     // true
-type P9  = IsPrime< Byte<12> >     // false
-type P10 = IsPrime< Byte<13> >     // true
-type P11 = IsPrime< Byte<14> >     // false
-type P12 = IsPrime< Byte<15> >     // false
-type P13 = IsPrime< Byte<16> >     // false
-type P14 = IsPrime< Byte<17> >     // true - pushing recursion limits here
-type P15 = IsPrime< Byte<18> >     // false
+type P3  = IsPrime< Byte<3> >      // true
+type P4  = IsPrime< Byte<4> >      // false
+type P5  = IsPrime< Byte<5> >      // true
+type P6  = IsPrime< Byte<6> >      // false
+type P7  = IsPrime< Byte<7> >      // true
+type P8  = IsPrime< Byte<8> >      // false
+type P9  = IsPrime< Byte<9> >      // false
+type P10 = IsPrime< Byte<10> >     // false
+type P11 = IsPrime< Byte<11> >     // true
+type P12 = IsPrime< Byte<12> >     // false
+type P13 = IsPrime< Byte<13> >     // true
+type P14 = IsPrime< Byte<14> >     // false
+type P15 = IsPrime< Byte<15> >     // false
+type P16 = IsPrime< Byte<16> >     // false
+type P17 = IsPrime< Byte<17> >     // true - pushing recursion limits here
+type P18 = IsPrime< Byte<18> >     // false
 
 ```
