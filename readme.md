@@ -46,7 +46,7 @@ License MIT
 The following demonstrates basic usage.
 
 ```typescript
-import { Byte, Num, Add, Mod } from './ts-8-bit'
+import { Byte, Num, Add, Sub, Mod } from './ts-8-bit'
 
 // ------------------------------------------------------------------------
 //
@@ -88,18 +88,16 @@ type E = Num< Add< Byte<127>, Byte<127> > >  // type E = 254
 type FizzBuzz<T extends Byte<any>> = 
      Mod<T, Byte<5>> extends Byte<0> ? 
      Mod<T, Byte<3>> extends Byte<0> ? 'fizzbuzz' : 'buzz' :
-     Mod<T, Byte<3>> extends Byte<0> ? 'fizz'     : ''
+     Mod<T, Byte<3>> extends Byte<0> ? 'fizz'     : ""
 
-type T1  = FizzBuzz< Byte<1> >     // type T1 = ""
-type T2  = FizzBuzz< Byte<2> >     // type T2 = ""
-type T3  = FizzBuzz< Byte<3> >     // type T3 = "fizz"
-type T4  = FizzBuzz< Byte<4> >     // type T4 = ""
-type T5  = FizzBuzz< Byte<5> >     // type T5 = "buzz"
-type T6  = FizzBuzz< Byte<6> >     // type T5 = "fizz"
-//
-// ... etc etc
-//
-type T15 = FizzBuzz< Byte<15> >    // type T15 = "fizzbuzz"
+type T1  = FizzBuzz< Byte<1> >     // ""
+type T2  = FizzBuzz< Byte<2> >     // ""
+type T3  = FizzBuzz< Byte<3> >     // "fizz"
+type T4  = FizzBuzz< Byte<4> >     // ""
+type T5  = FizzBuzz< Byte<5> >     // "buzz"
+type T6  = FizzBuzz< Byte<6> >     // "fizz"
+// ... etc ...
+type T15 = FizzBuzz< Byte<15> >    // "fizzbuzz"
 
 // ------------------------------------------------------------------------
 //
